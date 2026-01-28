@@ -13,5 +13,6 @@ echo "Sum is: ${SUM}"
 LEADERS=("Divya" "Rahul" "Devi" "Srinu")
 
 echo "All leaders: ${LEADERS[@]}"
-echo "All leaders: ${LEADERS[2]}"
+echo "All leaders: ${LEADERS[2]}"`
+echo "All leaders: ${LEADERS[11]}"
 #@ indicates the @ , if we want particular name in leaders keep index value 0,1...
