@@ -13,5 +13,5 @@ echo "Who is running this: $USER"
 echo "Home directory of User: $HOME"
 echo "PID of this script: $$" #Process id 
 sleep 50 &
-echo "PID of the last command in background is: $!"
+echo "PID of the last command in background is: $!"  
 
