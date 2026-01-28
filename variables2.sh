@@ -1,5 +1,6 @@
 #!/bin/bash
 
+#Passing values to variables called Arguments
 PERSON1=$1
 PERSON2=$2
 #printing the conversation blw ramesh and rajesh
