@@ -13,13 +13,13 @@ LOG_FILE="$LOGS_FOLDER/$SCRIPT_NAME.log" #/var/log/shell-scripting/17-loops.sh
 mkdir -p $LOGS_FOLDER
 echo "Script started executed at: $(date)" | tee -a $LOG_FILE
 
-if [$USERID -ne 0 ]; then
+if [ $USERID -ne 0 ]; then
     echo "ERROR:: Please run this script with root privilage"
     exit 1 #failure is other than 0
 fi 
 
 VALIDATE(){ #functions receive the i/p's through args just like shell script args
-    if [$1 -ne 0 ]; then
+    if [ $1 -ne 0 ]; then
         echo -e "Installing $2 ... $R FAILURE $N" | tee -a $LOG_FILE
         exit 1
     else
