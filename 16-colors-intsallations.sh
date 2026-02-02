@@ -1,6 +1,11 @@
-#!/bin/bash
+#!/bin/bash\
 #Installing Python and Java
 $USERID=$(id -u)
+R="\e[31m"
+G="\e[32m"
+Y="\e[33m"
+N="\e[0m"
+
 
 if [ $USERID -ne 0 ]; then
     echo "ERROR:: Please run this script in root privilage"
@@ -30,5 +35,5 @@ if [ $? -ne 0 ]; them
     dnf install java -y
     VALIDATE $? "JAVA"
 else 
-    echo -e "JAVA already exist .. $Y SKIPPING $N"
+    echo -e "JAVA already exist .. $Y SKIPPING $N" 
 fi
