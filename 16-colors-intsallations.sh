@@ -33,7 +33,7 @@ fi
 
 dnf list installed java
 if [ $? -ne 0 ]; then
-    echo "JAVA $R not installed ..Installing $N"
+    echo "JAVA not installed ..Installing $N"
     dnf install java -y
     VALIDATE $? "JAVA"
 else 
