@@ -22,7 +22,7 @@ if [ $? -ne 0 ]; then
     dnf install python3 -y
     VALIDATE $? "PYTHON3"
 else 
-    echo "Python3 already exist .. $G SKIPPING $N"
+    echo -e "Python3 already exist .. $Y SKIPPING $N"
 fi
 
 dnf list installed java
@@ -30,5 +30,5 @@ if [ $? -ne 0 ]; them
     dnf install java -y
     VALIDATE $? "JAVA"
 else 
-    echo "JAVA already exist .. $G SKIPPING $N"
+    echo -e "JAVA already exist .. $Y SKIPPING $N"
 fi
