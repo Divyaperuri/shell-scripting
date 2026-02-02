@@ -1,9 +1,9 @@
 #!/bin/bash
 
 echo "Please prime numbers from 1 to 20 are:"
-read NUMBER
 
-for i in {2..20}
+for NUMBER in {2..20}
+do
     is_prime=1
     for((i=2; i*i<= NUMBER; i++))
     do
