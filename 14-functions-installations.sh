@@ -8,11 +8,11 @@ if [ $USERID -ne 0 ]; then
 fi
 
 VALIDATE(){ #functions recieve inputes through args just like script args
-    if [ $1 -ne 0 ]; then
-        echo "ERROR:: Installing $2 is failure"
+    if  [ $1 -ne 0 ]; then
+        echo "$R ERROR:: Installing $2 is $R Failure"
         exit 1
     else 
-        echo "Installing $2 is SUCCESS"
+        echo "Installing $2 is $G SUCCESS"
     fi
 }
 
