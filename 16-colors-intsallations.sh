@@ -6,9 +6,8 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
-
 if [ $USERID -ne 0 ]; then
-    echo "ERROR:: Please run this script in root privilage"
+    echo -e "$R ERROR:: Please run this script in root privilage"
     exit 1 #if it is failure
 fi
 
@@ -24,7 +23,6 @@ VALIDATE(){ #functions recieve inputes through args just like script args
 dnf list installed python3
 #Install if it is not found
 if [ $? -ne 0 ]; then 
-    echo "Python3 not installed ..Installing"
     dnf install python3 -y
     VALIDATE $? "PYTHON3"
 else 
@@ -33,7 +31,6 @@ fi
 
 dnf list installed java
 if [ $? -ne 0 ]; then
-    echo "JAVA not installed ..Installing"
     dnf install java -y
     VALIDATE $? "JAVA"
 else 
