@@ -1,6 +1,6 @@
 #!/bin/bash
 
-NUMBER=80
+NUMBER=8
 
 if [ $NUMBER -lt 100 ]; then
     echo "given number $NUMBER is less than 100"
