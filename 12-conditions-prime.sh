@@ -1,12 +1,20 @@
 #!/bin/bash
 
-echo "Please enter the number:"
+echo "Please prime numbers from 1 to 20 are:"
 read NUMBER
-for i in {3}
-do
-if [ $(($NUMBER % $i)) -eq 0 ]; then
-    echo "Given number $NUMBER is PRIME"
-else
-    echo "Given number $NUMBER is NOT PRIME"
-fi
+
+for i in {2..20}
+    is_prime=1
+    for((i=2; i*i<= NUMBER; i++))
+    do
+    if [ $(($NUMBER % i)) -eq 0 ]; then
+        is_prime=0
+        break
+    fi
+    done
+      # If the number is prime, print it
+    if [ $is_prime -eq 1 ]; then
+        echo "$NUMBER"
+    fi
 done
+   
