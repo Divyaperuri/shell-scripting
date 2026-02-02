@@ -17,4 +17,3 @@ do
         echo "$NUMBER"
     fi
 done
-   
