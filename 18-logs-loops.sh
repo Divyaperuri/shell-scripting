@@ -29,7 +29,7 @@ VALIDATE(){ #functions receive the i/p's through args just like shell script arg
 
 # $@ : will get all arguments
 
-for package in $@
+for package in $@ 
 do 
     #check package is already installed or not
     dnf list installed $package &>>$LOG_FILE
