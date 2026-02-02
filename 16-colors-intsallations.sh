@@ -17,9 +17,10 @@ VALIDATE(){ #functions recieve inputes through args just like script args
 }
 
 dnf list installed python3
+#Install if it is not found
 if [ $? -ne 0 ]; then 
     dnf install python3 -y
-VALIDATE $? "PYTHON3"
+    VALIDATE $? "PYTHON3"
 else 
     echo "Python3 already exist .. $G SKIPPING $N"
 fi
@@ -27,7 +28,7 @@ fi
 dnf list installed java
 if [ $? -ne 0 ]; them
     dnf install java -y
-VALIDATE $? "JAVA"
+    VALIDATE $? "JAVA"
 else 
     echo "JAVA already exist .. $G SKIPPING $N"
 fi
