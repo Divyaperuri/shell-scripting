@@ -36,3 +36,11 @@ if [ $? -ne 0 ]; then
 else 
     echo -e "MYSQL already exist .. $Y SKIPPING $N" 
 fi
+
+dnf list installed nginx
+if [ $? -ne 0 ]; then
+    dnf install nginx -y
+    VALIDATE $? "NGINX"
+else 
+    echo -e "NGINX already exist .. $Y SKIPPING $N" 
+fi
