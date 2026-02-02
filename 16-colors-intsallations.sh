@@ -1,6 +1,6 @@
 #!/bin/bash\
 #Installing Python and Java
-$USERID=$(id -u)
+USERID=$(id -u)
 R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
@@ -24,6 +24,7 @@ VALIDATE(){ #functions recieve inputes through args just like script args
 dnf list installed python3
 #Install if it is not found
 if [ $? -ne 0 ]; then 
+    echo "Python3 not installed ..Installing $N"
     dnf install python3 -y
     VALIDATE $? "PYTHON3"
 else 
@@ -31,7 +32,8 @@ else
 fi
 
 dnf list installed java
-if [ $? -ne 0 ]; them
+if [ $? -ne 0 ]; then
+    echo "JAVA not installed ..Installing $N"
     dnf install java -y
     VALIDATE $? "JAVA"
 else 
