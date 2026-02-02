@@ -29,10 +29,10 @@ else
     echo -e "Python3 already exist .. $Y SKIPPING $N"
 fi
 
-dnf list installed java
+dnf list installed mysql
 if [ $? -ne 0 ]; then
-    dnf install java -y
-    VALIDATE $? "JAVA"
+    dnf install mysql -y
+    VALIDATE $? "MYSQL"
 else 
-    echo -e "JAVA already exist .. $Y SKIPPING $N" 
+    echo -e "MYSQL already exist .. $Y SKIPPING $N" 
 fi
