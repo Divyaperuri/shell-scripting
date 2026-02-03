@@ -2,5 +2,5 @@
 
 echo "Hello.."
 echo "Before error.."
-error through 
+dakjdhaksjdadkj
 echo "After error.."
