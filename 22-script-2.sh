@@ -1,4 +1,4 @@
 #!/bin/bash
 
-echo "Devops Course: $Divya"
+echo "Devops Course: $NAME"
 echo "PID of SCRIPT-2: $$"
