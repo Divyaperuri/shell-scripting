@@ -22,6 +22,6 @@ USAGE(){
     echo -e "USAGE: sudo sh 26-backuplogs.sh <SOURCE_DIR> <DEST_DIR> <DAYS>[optional], default 14 days"
     exit 1
 }  
-if [ $# -lt 2]; then
+if [ $# -lt 2 ]; then
     USAGE
 fi   
