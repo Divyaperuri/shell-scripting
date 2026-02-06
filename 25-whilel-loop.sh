@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #while loop will read the files 
-#File reading line by line : IFS(Internal field separator)
+
 # count=5
 # echo "Starting countdown..."
 
@@ -12,12 +12,13 @@
 #     count=$((count -1)) #Decrement the count
 # done
 
-# echo "Times up!"
+# echo "Times up!"  
 
+#File reading line by line : IFS(Internal field separator)
 while IFS= read -r line; do
 
     echo "Processing line: $line"
 
-done < 21-script-1.sh
+done < 22-script-1.sh
 # Here < symbol indicates the output taking from the file
 # <<< symbol indicates the output taking from variable 
