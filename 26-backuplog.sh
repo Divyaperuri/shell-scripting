@@ -9,6 +9,8 @@ N="\e[0m"
 LOGS_FOLDER="/var/log/shell-scripting "
 SCRIPT_NAME=$( echo $0 | cut -d "." -f1)
 LOG_FILE="$LOGS_FOLDER/$SCRIPT_NAME.log" #/var/log/shell-scripting/17-loops.sh
+SOURCE_DIR=$1
+DEST_DIR=$2
 
 mkdir -p $LOGS_FOLDER
 echo "Script started executed at: $(date)" | tee -a $LOG_FILE
@@ -24,4 +26,9 @@ USAGE(){
 }  
 if [ $# -lt 2 ]; then
     USAGE
-fi   
+fi 
+
+if [ ! -d $SOURCE_DIR ]; then
+    echo -e "$R $SOURCE_DIR does not exist $N"
+    exit 1
+fi
