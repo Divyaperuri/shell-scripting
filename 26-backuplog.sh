@@ -45,7 +45,8 @@ if [ ! -z "${FILES}" ]; then
     echo "Files found"
     TIMESTAMP=$(date +%F-%H-%M)
     ZIP_FILE_NAME="$DEST_DIR/app-logs-$TIMESTAMP.zip"
-    
+    echo "Zip file name: $ZIP_FILE_NAME"
+    echo $FILES | zip -@ -j "$ZIP_FILE_NAME"
 else
     echo -e "$G No files to archieve.. $N"
 fi
