@@ -55,6 +55,8 @@ if [ ! -z "${FILES}" ];
     ZIP_FILE_NAME="$DEST_DIR/app-logs-$TIMESTAMP.zip"
     echo "Zip file name: $ZIP_FILE_NAME"
     echo $FILES | zip -@ -j "$ZIP_FILE_NAME"
+    find $SOURCE_DIR -name "*.log" -type f -mtime +$DAYS | zip -@ -j "$ZIP_FILE_NAME"
+
 
     ##Check Archieval Success or not
     if [ -f $ZIP_FILE_NAME ];
@@ -67,7 +69,7 @@ if [ ! -z "${FILES}" ];
             echo "Deleting the file: $filepath"
             rm -rf $filepath
             echo "Deleted the file: $filepath"
-        done <<< $FILES_TO_DELETE
+        done <<< $FILES
     else
         echo -e "$R Archieve... Failure $N"
         exit 1
