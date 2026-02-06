@@ -47,7 +47,7 @@ fi
 FILES=$(find $SOURCE_DIR -name "*.log" -type f -mtime +$DAYS)
 
 #Archieving the files to Source dir to Destination dir by ziping the files
-if [ ! -z "${FILES}" ]; then 
+if [ ! -z "${FILES}" ] then 
     #Start Archieving
     echo "Files found: $FILES"
     TIMESTAMP=$(date +%F-%H-%M)
