@@ -19,6 +19,6 @@ while IFS= read -r line; do
 
     echo "Processing line: $line"
 
-done < 22-script-1.sh
+done < 22-script-2.sh
 # Here < symbol indicates the output taking from the file
 # <<< symbol indicates the output taking from variable 
