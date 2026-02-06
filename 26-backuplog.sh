@@ -59,7 +59,7 @@ if [ ! -z "${FILES}" ];
 
 
     ##Check Archieval Success or not
-    if [ -f $ZIP_FILE_NAME ];
+    if [ -f $ZIP_FILE_NAME ]
     then
         echo -e "$G Successfully archieval $N"
 
