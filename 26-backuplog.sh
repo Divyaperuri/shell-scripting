@@ -52,6 +52,13 @@ if [ ! -z "${FILES}" ]; then
     if [ -f $ZIP_FILE_NAME ]
     then
         echo -e "$G Successfully archieval $N"
+
+        while IFS= rad -r filepath
+        do
+            echo "Deleting the file: $filepath"
+            rm -rf $filepath
+            echo "Deleted the file: $filepath"
+        done <<< $FILES_TO_DELETE
     else
         echo -e "$R Archieve... Failure $N"
         exit 1
