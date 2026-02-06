@@ -41,12 +41,19 @@ fi
 
 FILES=$(find $SOURCE_DIR -name "*.log" -type f -mtime +$DAYS)
 
+#Archieving the files to Source dir to Destination dir by ziping the files
 if [ ! -z "${FILES}" ]; then 
     echo "Files found: $FILES"
     TIMESTAMP=$(date +%F-%H-%M)
     ZIP_FILE_NAME="$DEST_DIR/app-logs-$TIMESTAMP.zip"
     echo "Zip file name: $ZIP_FILE_NAME"
     echo $FILES | zip -@ -j "$ZIP_FILE_NAME"
+
+    if [ -f $ZIP_FILE_NAME ]; then
+        echo -e "$G Successfully archieval $N"
+    else
+        echo -e "$R Archieve... Failure $N"
+        exit 1
 else
     echo -e "$G No files to archieve.. $N"
 fi
