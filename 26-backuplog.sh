@@ -49,7 +49,8 @@ if [ ! -z "${FILES}" ]; then
     echo "Zip file name: $ZIP_FILE_NAME"
     echo $FILES | zip -@ -j "$ZIP_FILE_NAME"
 
-    if [ -f $ZIP_FILE_NAME ]; then
+    if [ -f $ZIP_FILE_NAME ]
+    then
         echo -e "$G Successfully archieval $N"
     else
         echo -e "$R Archieve... Failure $N"
