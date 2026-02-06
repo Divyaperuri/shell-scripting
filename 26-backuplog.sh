@@ -47,7 +47,8 @@ fi
 FILES=$(find $SOURCE_DIR -name "*.log" -type f -mtime +$DAYS)
 
 #Archieving the files to Source dir to Destination dir by ziping the files
-if [ ! -z "${FILES}" ] then 
+if [ ! -z "${FILES}" ]; 
+    then 
     #Start Archieving
     echo "Files found: $FILES"
     TIMESTAMP=$(date +%F-%H-%M)
@@ -56,11 +57,11 @@ if [ ! -z "${FILES}" ] then
     echo $FILES | zip -@ -j "$ZIP_FILE_NAME"
 
     ##Check Archieval Success or not
-    if [ -f $ZIP_FILE_NAME ]
+    if [ -f $ZIP_FILE_NAME ];
     then
         echo -e "$G Successfully archieval $N"
 
-    #Delete if success
+        #Delete if success
         while IFS= rad -r filepath
         do
             echo "Deleting the file: $filepath"
@@ -70,6 +71,7 @@ if [ ! -z "${FILES}" ] then
     else
         echo -e "$R Archieve... Failure $N"
         exit 1
+    fi
 else
     echo -e "$G No files to archieve.. $N"
 fi
