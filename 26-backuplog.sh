@@ -8,7 +8,7 @@ N="\e[0m"
 
 LOGS_FOLDER="/var/log/shell-script"
 SCRIPT_NAME=$( echo $0 | cut -d "." -f1)
-LOG_FILE="$LOGS_FOLDER/$SCRIPT_NAME.log" #/var/log/shell-scripting/17-loops.sh
+LOG_FILE="$LOGS_FOLDER/$SCRIPT_NAME.log" #/var/log/shell-scripting/26-backuplog.sh
 SOURCE_DIR=$1
 DEST_DIR=$2
 DAYS=${3:-14} #If not provides consider the default 14 days
