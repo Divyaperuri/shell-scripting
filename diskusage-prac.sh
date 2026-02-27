@@ -10,5 +10,5 @@
 USAGE=$(echo $line | awk '{Print$6}' | cut -d "%" -f1)
  PARTITION=$(echo $line | awk '{print $7}')
     if [ $USAGE -ge 34 ]; then 
-        MESSAGE+="High Usage on $Partition: $USAGE" % <br>
+        MESSAGE+="High Usage on $Partition: $USAGE" 
     fi
