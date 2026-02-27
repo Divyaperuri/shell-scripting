@@ -10,5 +10,6 @@
 file ="$1"
 if[ -f "$file" ];
     then echo "File exists: $file"
-    else echo "File not found: $file"
+    else touch "file1"
+    echo "File created: $file"
 fi 
