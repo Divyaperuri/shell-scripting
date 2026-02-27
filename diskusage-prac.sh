@@ -1,5 +1,5 @@
 #!/bin/bash   #--> bin/bash means path of bash shell
-df -h | awk 'NR>1 && int($5) > 75 {print $6 "is" $5 "full"}'
+df -h | awk 'NR>1 && int($5) > 5 {print $6 "is" $5 "full"}'
 
 # NR>1 means skip the first line (the header)
 # $5 means column 5 is the use% (eg:85%)
